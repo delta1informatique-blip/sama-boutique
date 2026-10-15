@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sama Boutique - Informatique, électronique et accessoires au Sénégal. Commandez sur WhatsApp.">
+  <title>Sama Boutique | Informatique & Électronique</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><img class="brand-logo" src="logo-sama-boutique.png" alt="Logo Sama Boutique"><span>SAMA <b>BOUTIQUE</b><small>INFORMATIQUE • ÉLECTRONIQUE</small></span></a>
+    <a class="whatsapp top-cta" href="#" data-whatsapp-message="Bonjour Sama Boutique, je souhaite avoir des informations sur vos produits.">WhatsApp</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">LA TECHNOLOGIE À VOTRE PORTÉE</span>
+        <h1>Équipez-vous.<br><em>Connectez-vous.</em></h1>
+        <p>Découvrez notre sélection d’ordinateurs, téléphones et accessoires. Commandez simplement sur WhatsApp.</p>
+        <a class="button primary" href="#produits">Découvrir les produits <span>↘</span></a>
+        <div class="trust-row"><span>✓ Commande simple</span><span>✓ Retrait ou livraison</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="device laptop"><div class="screen"><div class="screen-glow"></div><div class="screen-line"></div></div><div class="keyboard"></div></div>
+        <div class="device phone"><div class="phone-screen"><span class="phone-dot"></span><div class="phone-wave"></div></div></div>
+        <div class="floating-tag">TECHNO • ACCESSOIRES</div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div><span class="benefit-icon">⌕</span><span><b>Choix pratique</b><small>Des produits pour vos besoins</small></span></div>
+      <div><span class="benefit-icon">◎</span><span><b>Commande WhatsApp</b><small>Confirmation directe avec nous</small></span></div>
+      <div><span class="benefit-icon">↗</span><span><b>Retrait ou livraison</b><small>À convenir lors de la commande</small></span></div>
+    </section>
+
+    <section class="products-section" id="produits">
+      <div class="section-heading">
+        <div><span class="eyebrow">NOTRE SÉLECTION</span><h2>Nos produits</h2><p>Les articles ci-dessous sont des exemples. Remplacez-les par votre stock réel.</p></div>
+        <label class="search"><span>⌕</span><input id="search" type="search" placeholder="Rechercher un produit…"></label>
+      </div>
+      <nav class="filters" id="filters" aria-label="Catégories">
+        <button class="filter active" data-category="Tous">Tout voir</button>
+        <button class="filter" data-category="Ordinateurs">Ordinateurs</button>
+        <button class="filter" data-category="Téléphones">Téléphones</button>
+        <button class="filter" data-category="Accessoires">Accessoires</button>
+        <button class="filter" data-category="Électronique">Électronique</button>
+      </nav>
+      <div class="product-grid" id="product-grid"></div>
+      <div class="empty-state" id="empty-state" hidden>Aucun produit trouvé. Essayez une autre recherche.</div>
+    </section>
+
+    <section class="order-banner">
+      <div><span class="eyebrow">BESOIN D’UN CONSEIL ?</span><h2>Nous sommes là pour vous aider.</h2><p>Envoyez-nous votre demande et nous vous confirmerons la disponibilité, le prix et les modalités de livraison.</p></div>
+      <a class="button light whatsapp" href="#" data-whatsapp-message="Bonjour Sama Boutique, je souhaite être conseillé pour un achat.">Écrire sur WhatsApp ↗</a>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><img class="brand-logo footer-logo" src="logo-sama-boutique.png" alt="Logo Sama Boutique"><span>SAMA <b>BOUTIQUE</b><small>INFORMATIQUE • ÉLECTRONIQUE</small></span></a><p>© <span id="year"></span> Sama Boutique. Tous droits réservés.</p><p class="footer-note">Paiement : Wave, Orange Money ou à la livraison, selon confirmation du vendeur. Zone de livraison : à préciser avec le vendeur.</p></footer>
+
+  <div class="cart-dock" id="cart-dock" hidden>
+    <div><b id="cart-count">0 article</b><small id="cart-total">0 FCFA</small></div>
+    <button class="button primary" id="checkout">Commander sur WhatsApp</button>
+  </div>
+
+  <dialog id="checkout-dialog">
+    <form method="dialog" id="checkout-form">
+      <button class="dialog-close" aria-label="Fermer">×</button>
+      <span class="eyebrow">FINALISER LA COMMANDE</span><h2>Vos coordonnées</h2>
+      <label>Nom complet<input id="customer-name" required placeholder="Votre nom"></label>
+      <label>Téléphone<input id="customer-phone" required type="tel" placeholder="+221 …"></label>
+      <label>Mode de réception<select id="delivery"><option>Retrait sur place</option><option>Livraison</option></select></label>
+      <label>Mode de paiement<select id="payment"><option>Wave</option><option>Orange Money</option><option>Paiement à la livraison</option></select></label>
+      <label>Adresse ou précision (facultatif)<textarea id="customer-note" rows="2" placeholder="Quartier, adresse ou détails"></textarea></label>
+      <p class="form-hint">La commande sera envoyée sur WhatsApp. Le paiement n’est pas traité automatiquement par ce site.</p>
+      <button type="submit" class="button primary full">Envoyer ma commande</button>
+    </form>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
